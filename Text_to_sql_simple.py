@@ -6,12 +6,18 @@ engine = create_engine("sqlite:///personas.db", echo=True)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-class Persona(Base):  # <- espacio agregado
+class Persona(Base):  
     __tablename__ = "personas"
     id = Column(Integer, primary_key=True)
     nombre = Column(String)
     edad = Column(Integer)
-
+# no sale esta vaina
+class animal(Base):  
+    __tablename__ = "animales"
+    id = Column(Integer, primary_key=True)
+    nombre = Column(String)
+    edad = Column(Integer)
+#samuel ayudame 
 Base.metadata.create_all(engine)
 
 def interpretar_texto(texto):
