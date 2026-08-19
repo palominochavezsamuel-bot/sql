@@ -1,6 +1,8 @@
 from sqlalchemy import create_engine, Column, Integer, String, text
 from sqlalchemy.orm import declarative_base, sessionmaker
-
+ 
+ 
+#Bienvenido a este programa
 Base = declarative_base()
 engine = create_engine("sqlite:///personas.db", echo=True)
 Session = sessionmaker(bind=engine)
